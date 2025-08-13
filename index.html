@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tech Conference 2025</title>
+  <link rel="stylesheet" href="event.css"/>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>Tech Innovators Summit 2025</h1>
+    <p>August 25–27, 2025 · Bengaluru, India</p>
+  </header>
+
+  <!-- Sticky Navigation -->
+  <nav class="navbar">
+    <a href="#speakers">Speakers</a>
+    <a href="#agenda">Agenda</a>
+    <a href="#tickets">Tickets</a>
+    <a href="#venue">Venue</a>
+  </nav>
+
+  <!-- Countdown Timer -->
+  <section class="countdown" id="countdown">
+    <h2>Countdown to Event</h2>
+    <p id="timer">Loading...</p>
+  </section>
+
+  <!-- Speaker Section -->
+  <section class="speakers" id="speakers">
+    <h2>Meet the Speakers</h2>
+    <div class="speaker-grid">
+      <div class="speaker-card">
+        <img src="johndoe.jpg" alt="Speaker 1">
+        <h3>Jane Doe</h3>
+        <p>CTO, FutureTech</p>
+        <p>Expert in AI & Robotics</p>
+      </div>
+      <div class="speaker-card">
+        <img src="johnsmith.jpg" alt="Speaker 2">
+        <h3>John Smith</h3>
+        <p>Lead Engineer, OpenCode</p>
+        <p>Web3 & Blockchain Advocate</p>
+      </div>
+      <!-- Add 3 more speaker cards similarly -->
+    </div>
+  </section>
+
+  <!-- Agenda Section -->
+  <section class="agenda" id="agenda">
+    <h2>Event Agenda</h2>
+    <ul>
+      <li>Day 1: Keynotes & Panel Discussions</li>
+      <li>Day 2: Workshops & Hackathons</li>
+      <li>Day 3: Product Demos & Networking</li>
+    </ul>
+  </section>
+
+  <!-- Ticket Info -->
+  <section class="tickets" id="tickets">
+    <h2>Tickets</h2>
+    <p>Early Bird: ₹1,999 | Regular: ₹2,999</p>
+    <a href="register.html" class="cta">Register Now</a>
+  </section>
+
+  <!-- Venue Section -->
+  <section class="venue" id="venue">
+    <h2>Venue</h2>
+    <p>International Convention Centre, Bengaluru</p>
+    <img src="map.png" alt="Venue Map" class="map">
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>Sponsored by: <img src="britanialogo.png" alt="Sponsor Logo" class="sponsor-logo"></p>
+    <p>
+      Contact: <a href="mailto:info@techsummit.com">info@techsummit.com</a> |
+      <a href="#">Privacy Policy</a>
+    </p>
+  </footer>
+
+  <script>
+    // Countdown Timer
+    const eventDate = new Date("August 25, 2025 09:00:00").getTime();
+    const timerElement = document.getElementById("timer");
+
+    const countdown = setInterval(() => {
+      const now = new Date().getTime();
+      const timeLeft = eventDate - now;
+
+      if (timeLeft < 0) {
+        clearInterval(countdown);
+        timerElement.innerHTML = "Event Started!";
+      } else {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        timerElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      }
+    }, 1000);
+  </script>
+
+</body>
+</html>

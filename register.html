@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register for Tech Conference</title>
+  <link rel="stylesheet" href="css/event.css" />
+  <style>
+    .register-form {
+      max-width: 500px;
+      margin: 40px auto;
+      padding: 20px;
+      background: #f4f4f4;
+      border-radius: 8px;
+    }
+
+    .register-form h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .register-form label {
+      display: block;
+      margin: 10px 0 5px;
+    }
+
+    .register-form input, .register-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .register-form button {
+      background: #0073e6;
+      color: white;
+      padding: 12px;
+      border: none;
+      width: 100%;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .register-form button:hover {
+      background: #005baa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="register-form">
+    <h2>Register Now</h2>
+    <form action="#" method="post">
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="ticket">Ticket Type:</label>
+      <select id="ticket" name="ticket">
+        <option value="early">Early Bird - ₹1,999</option>
+        <option value="regular">Regular - ₹2,999</option>
+      </select>
+
+      <button type="submit">Submit Registration</button>
+    </form>
+  </div>
+
+</body>
+</html>
